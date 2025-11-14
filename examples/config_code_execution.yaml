@@ -1,0 +1,21 @@
+# Gemini Agent with Code Execution
+# This configuration enables Python code execution capability
+
+agent:
+  id: "gemini-coder"
+  
+  backend:
+    type: "gemini"
+    model: "gemini-2.0-flash-exp"
+    
+    # Enable code execution for running Python code
+    enable_code_execution: true
+    enable_web_search: false
+    
+    temperature: 1.0
+  
+  system_message: "You are a helpful coding assistant with the ability to execute Python code. When solving problems, you can write and run code to verify your solutions."
+
+ui:
+  display_type: "rich_terminal"
+  logging_enabled: true

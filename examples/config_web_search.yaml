@@ -1,0 +1,21 @@
+# Gemini Agent with Web Search
+# This configuration enables Google Search grounding
+
+agent:
+  id: "gemini-researcher"
+  
+  backend:
+    type: "gemini"
+    model: "gemini-2.5-pro"
+    
+    # Enable web search for real-time information
+    enable_code_execution: false
+    enable_web_search: true
+    
+    temperature: 1.0
+  
+  system_message: "You are a research assistant with access to real-time web search. Use web search to provide accurate, up-to-date information."
+
+ui:
+  display_type: "rich_terminal"
+  logging_enabled: true

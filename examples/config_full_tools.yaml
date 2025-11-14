@@ -1,0 +1,22 @@
+# Gemini Agent with All Tools
+# This configuration enables both code execution and web search
+
+agent:
+  id: "gemini-power-agent"
+  
+  backend:
+    type: "gemini"
+    model: "gemini-2.5-pro"
+    
+    # Enable all available tools
+    enable_code_execution: true
+    enable_web_search: true
+    
+    temperature: 1.0
+    max_tokens: 8192
+  
+  system_message: "You are an advanced AI assistant with both code execution and web search capabilities. You can write and run code, and access real-time information from the web."
+
+ui:
+  display_type: "rich_terminal"
+  logging_enabled: true
